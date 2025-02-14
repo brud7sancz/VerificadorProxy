@@ -1,9 +1,9 @@
 <?php
 function getProxy()
 {
-    $proxySocks = file("proxy.txt"); // Lê o arquivo com proxies
-    $myproxy = rand(0, sizeof($proxySocks) - 1); // Escolhe um proxy aleatoriamente
-    $proxySocks = trim($proxySocks[$myproxy]); // Remove espaços extras ou quebras de linha
+    $proxySocks = file("proxy.txt");
+    $myproxy = rand(0, sizeof($proxySocks) - 1);
+    $proxySocks = trim($proxySocks[$myproxy]);
     
     return $proxySocks;
 }
@@ -35,11 +35,9 @@ while ($proxy === null) {
     $proxy = getProxy();
 
     if (testProxy($proxy)) {
-        echo "Proxy LIVE: $proxy <br>";
+        echo "Proxy LIVE ✅: $proxy <br>";
     } else {
-        echo "Proxy DIE: $proxy <br>";
         $proxy = null;
     }
-
 }
 ?>
