@@ -18,10 +18,12 @@ Um verificador de proxy simples e eficiente em PHP para validar a disponibilidad
 
 Usando o script no PHP
 Para utilizar o verificador de proxy no seu código PHP, basta incluir o arquivo chk-proxy.php no seu projeto:
+
 require_once("chk-proxy.php");
 
 Usando com cURL no PHP
 Caso esteja configurando uma requisição cURL para testar um proxy, basta adicionar a opção CURLOPT_PROXY ao seu código:
+
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
 
 ## 📌 Resumo
